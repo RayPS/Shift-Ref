@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="RootViewController" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221" y="675"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="jQV-TV-mzB">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XR7-fX-BEW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS8-SJ-Ske" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="281"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="wC0-DF-c0I">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="f49-YA-GaA" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="00j-7P-j9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pdy-lO-aea"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xbe-3y-GqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="StepCard" image="page1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-72-xfJ" userLabel="Page">
+                                <rect key="frame" x="140" y="70" width="320" height="500"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cEQ-72-xfJ" secondAttribute="height" multiplier="16:25" id="Ddx-ew-DXK"/>
+                                    <constraint firstAttribute="height" constant="500" id="h5r-GW-g2d"/>
+                                    <constraint firstAttribute="width" constant="320" id="mSl-It-Edb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="NextStepButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klc-Af-idN" userLabel="ButtonNextStep">
+                                <rect key="frame" x="300" y="470" width="130" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="STb-3m-HkM"/>
+                                    <constraint firstAttribute="width" secondItem="Klc-Af-idN" secondAttribute="height" multiplier="13:6" id="uWs-h8-Owc"/>
+                                    <constraint firstAttribute="height" constant="60" id="zrP-ZL-hIR"/>
+                                </constraints>
+                                <state key="normal" image="Btn_NextStep">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextStep:" destination="f49-YA-GaA" eventType="touchUpInside" id="KJY-LV-vV3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="StartAgainButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deb-ZN-RQX" userLabel="ButtonStartAgain">
+                                <rect key="frame" x="170" y="470" width="130" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="2BU-wR-Aeo"/>
+                                    <constraint firstAttribute="height" constant="60" id="e04-fM-zGc"/>
+                                    <constraint firstAttribute="width" constant="100" id="eC8-tP-PrJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="uH1-LO-I9O"/>
+                                    <constraint firstAttribute="width" secondItem="deb-ZN-RQX" secondAttribute="height" multiplier="13:6" id="vit-lD-DwO"/>
+                                </constraints>
+                                <state key="normal" image="Btn_StartAgain">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eC8-tP-PrJ"/>
+                                        <exclude reference="uH1-LO-I9O"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startAgain:" destination="f49-YA-GaA" eventType="touchUpInside" id="oz3-Qd-qW2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="cEQ-72-xfJ" secondAttribute="centerY" constant="-20" id="8Pq-MG-gE6"/>
+                            <constraint firstItem="Klc-Af-idN" firstAttribute="bottom" secondItem="cEQ-72-xfJ" secondAttribute="bottom" constant="-40" id="9Nr-7a-vgu"/>
+                            <constraint firstItem="Klc-Af-idN" firstAttribute="trailing" secondItem="cEQ-72-xfJ" secondAttribute="trailing" constant="-30" id="Yvz-qi-atT"/>
+                            <constraint firstAttribute="centerX" secondItem="cEQ-72-xfJ" secondAttribute="centerX" id="fks-9g-Jyt"/>
+                            <constraint firstItem="cEQ-72-xfJ" firstAttribute="height" relation="lessThanOrEqual" secondItem="Xbe-3y-GqJ" secondAttribute="height" id="k7c-Nb-NZI"/>
+                            <constraint firstItem="cEQ-72-xfJ" firstAttribute="leading" secondItem="deb-ZN-RQX" secondAttribute="leading" constant="-30" id="tdT-5C-pub"/>
+                            <constraint firstItem="cEQ-72-xfJ" firstAttribute="bottom" secondItem="deb-ZN-RQX" secondAttribute="bottom" constant="40" id="uah-NK-dyc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="cEQ-72-xfJ" id="0re-oi-zmy"/>
+                        <outlet property="nextStep" destination="Klc-Af-idN" id="VCH-KR-Ia7"/>
+                        <outlet property="startAgain" destination="deb-ZN-RQX" id="T2g-Tt-9bR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5r-Qz-FWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="1070"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Btn_NextStep" width="130" height="60"/>
+        <image name="Btn_StartAgain" width="130" height="60"/>
+        <image name="page1.png" width="960" height="1500"/>
+    </resources>
+</document>
